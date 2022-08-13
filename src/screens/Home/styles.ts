@@ -21,5 +21,19 @@ export const styles = StyleSheet.create({
         borderRadius: 5,
         padding: 16,
         fontSize: 16,
+        margin: 20,
+    },
+    button: {
+        width: 150,
+        height: 56,
+        borderRadius: 5,
+        backgroundColor: '#31cf67',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    buttonText: {
+        color: '#ffffff',
+        fontSize: 24,
+        fontWeight: 'bold',
     }
 });

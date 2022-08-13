@@ -26,10 +26,10 @@ export default function Home() {
         </TouchableOpacity>
       </View>
 
-      <Participant />
-      <Participant />
-      <Participant />
-      <Participant />
+      <Participant name="Jarilton Junior"/>
+      <Participant name="Thalia Favaro"/>
+      <Participant name="Marcos Alexandre"/>
+      <Participant name="Tamiris Silva"/>
 
       <StatusBar style="auto" />
     </View>

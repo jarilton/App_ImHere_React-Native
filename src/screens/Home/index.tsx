@@ -31,8 +31,12 @@ export default function Home() {
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.eventName}>Nome do evento</Text>
-      <Text style={styles.eventDate}>Sábado, 13 de Agosto de 2022</Text>
+      <Text style={styles.eventName}>
+        Festa do Jamal
+      </Text>
+      <Text style={styles.eventDate}>
+        Sábado, 12 de Dezembro de 2022
+      </Text>
 
       <View style={styles.form}>
         <TextInput
@@ -63,7 +67,7 @@ export default function Home() {
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={() => (
           <Text style={styles.listEmptyText}>
-            Ninguém chegou ao evento ainda? Adicione participantes...
+            Ninguém chegou ao evento ainda? Adicione participantes.
           </Text>
         )}
       />

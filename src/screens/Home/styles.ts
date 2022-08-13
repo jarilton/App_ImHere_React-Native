@@ -7,13 +7,15 @@ export const styles = StyleSheet.create({
         padding: 20
     },
     eventName: {
-        fontSize: 24,
+        fontSize: 40,
         marginTop: 40,
         color: '#ffffff',
+        textAlign: 'center',
     },
     eventDate: {
         fontSize: 18,
         color: '#ffffff',
+        textAlign: 'center',
     },
     input: {
         flex: 1,

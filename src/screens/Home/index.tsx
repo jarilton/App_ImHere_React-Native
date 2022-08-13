@@ -1,9 +1,16 @@
-import { StatusBar } from "expo-status-bar";
 import { Text, View, TextInput, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 import { Participant } from "../../components/Participant";
 
 export default function Home() {
+
+  function handlePartipantAdd() {
+    alert("Você clicou para adicionar um participante!")
+  }
+
+  function handlePartipantRemove( name: string ) {
+    alert(`Você clicou para remover o participante ${name}`)
+  }
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>Nome do evento</Text>
@@ -18,20 +25,17 @@ export default function Home() {
 
         <TouchableOpacity
           style={styles.button}
-          onPress={(handlePartipantAdd) =>
-            alert("Você clicou para adicionar um participante")
-          }
+          onPress={handlePartipantAdd}
         >
           <Text style={styles.buttonText}> + </Text>
         </TouchableOpacity>
       </View>
 
-      <Participant name="Jarilton Junior"/>
-      <Participant name="Thalia Favaro"/>
-      <Participant name="Marcos Alexandre"/>
-      <Participant name="Tamiris Silva"/>
+      <Participant name="Jarilton Junior" onRemove={() => handlePartipantRemove("Jarilton Junior")} />
+      <Participant name="Thalia Favaro" onRemove={() => handlePartipantRemove("Thalia Favaro")} />
+      <Participant name="Marcos Alexandre" onRemove={() => handlePartipantRemove("Marcos Alexandre")} />
+      <Participant name="Tamiris Silva" onRemove={() => handlePartipantRemove("Tamiris Silva")} />
 
-      <StatusBar style="auto" />
     </View>
   );
 }

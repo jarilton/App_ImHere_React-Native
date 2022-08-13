@@ -1,19 +1,22 @@
 import { Text, View, TextInput, TouchableOpacity, FlatList, Alert } from "react-native";
 import { styles } from "./styles";
 import { Participant } from "../../components/Participant";
+import { useState } from "react";
 
 export default function Home() {
 
-  const participant = ['Jamal', 'Thalia', 'Nathalia', 'Felipe', 'Alisson', 'Marcos', 'Mayk', 'Diego', 'Bruno', 'Ana']
+  const [participants, setParticipants] = useState(['João'])
 
   function handlePartipantAdd() {
-    if (participant.includes('Jamal')) {
+    if (participants.includes('Jamal')) {
       Alert.alert("Opss", "Esse nome já existe, tente novamente com outro nome!!")
     }
+
+    setParticipants( prevState => [...prevState, 'Thalia']);
   }
 
   function handlePartipantRemove(name: string) {
-    Alert.alert("Remover",`Você deseja realmente remover o participante ${name}`, [
+    Alert.alert("Remover", `Você deseja realmente remover o participante ${name}`, [
       {
         text: "Sim",
         onPress: () => Alert.alert("Nome deletado com sucesso!")
@@ -45,7 +48,7 @@ export default function Home() {
       </View>
 
       <FlatList
-        data={participant}
+        data={participants}
         keyExtractor={item => item}
         renderItem={({ item }) => (
           <Participant

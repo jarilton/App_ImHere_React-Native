@@ -4,12 +4,11 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#ffffff',
-        alignItems: 'center',
-        justifyContent: 'center',
         padding: 20
     },
     eventName: {
         fontSize: 24,
+        marginTop: 40,
     },
     eventDate: {
         fontSize: 18,
@@ -40,6 +39,7 @@ export const styles = StyleSheet.create({
     form: {
         width: '100%',
         flexDirection: 'row',
-        margin: 40
+        marginBottom: 40,
+        marginTop: 40,
     }
 });

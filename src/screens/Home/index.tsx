@@ -8,20 +8,22 @@ export default function Home() {
       <Text style={styles.eventName}>Nome do evento</Text>
       <Text style={styles.eventDate}>Sábado, 13 de Agosto de 2022</Text>
 
-      <TextInput
-        style={styles.input}
-        placeholder="Nome do participante..."
-        placeholderTextColor="#ffffff"
-      />
+      <View style={styles.form}>
+        <TextInput
+          style={styles.input}
+          placeholder="Nome do participante..."
+          placeholderTextColor="#ffffff"
+        />
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={(handlePartipantAdd) =>
-          alert("Você clicou para adicionar um participante")
-        }
-      >
-        <Text style={styles.buttonText}>+ Adicionar</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={(handlePartipantAdd) =>
+            alert("Você clicou para adicionar um participante")
+          }
+        >
+          <Text style={styles.buttonText}> + </Text>
+        </TouchableOpacity>
+      </View>
 
       <StatusBar style="auto" />
     </View>
